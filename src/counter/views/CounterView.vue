@@ -4,14 +4,12 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue';
+import { ref } from 'vue'
 
-  const counter = ref(5);
-  const increase = () => {
-    counter.value ++;
-  }
+const counter = ref(5)
+const increase = () => {
+  counter.value++
+}
 </script>
 
-<style>
-
-</style>
+<style></style>

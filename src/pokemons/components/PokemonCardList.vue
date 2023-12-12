@@ -1,11 +1,10 @@
-
 <script setup lang="ts">
-import type { Pokemon } from "../interfaces";
-import PokemonCard from "./PokemonCard.vue";
+import type { Pokemon } from '../interfaces'
+import PokemonCard from './PokemonCard.vue'
 interface Props {
-    pokemons: Pokemon[]
+  pokemons: Pokemon[]
 }
-defineProps<Props>();
+defineProps<Props>()
 </script>
 <template>
   <div class="card-list">
@@ -13,12 +12,10 @@ defineProps<Props>();
   </div>
 </template>
 
-
 <style scoped>
-    .card-list{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
+.card-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
 </style>
-

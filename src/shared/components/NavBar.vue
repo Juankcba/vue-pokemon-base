@@ -5,29 +5,27 @@
       <span>{{ $props.title }}</span>
     </template>
 
-    <RouterLink v-for="link of links" :key=link.path :to=link.path>{{ link.title }}</RouterLink>
+    <RouterLink v-for="link of links" :key="link.path" :to="link.path">{{ link.title }}</RouterLink>
   </nav>
 </template>
 
 <script setup lang="ts">
-import type {RouterLink} from '@/router/list-routes';
-import { computed, toRef } from 'vue';
-interface Props{
-  title?: string;
-  links: RouterLink[];
-  isSecondary? : boolean;
+import type { RouterLink } from '@/router/list-routes'
+import { computed, toRef } from 'vue'
+interface Props {
+  title?: string
+  links: RouterLink[]
+  isSecondary?: boolean
 }
-const props = withDefaults(defineProps<Props>(),{
-title: 'CompoApp',
-isSecondary: false
-});
+const props = withDefaults(defineProps<Props>(), {
+  title: 'CompoApp',
+  isSecondary: false
+})
 //const links = toRef(props, 'links');
-const links = computed(()=> props.links.filter(link => link.visible))
-
+const links = computed(() => props.links.filter((link) => link.visible))
 </script>
 
 <style>
-
 nav {
   width: 100%;
   font-size: 12px;
